@@ -132,15 +132,15 @@
       "blocks": {
         "subheading_gqPAGA": {
           "type": "subheading",
+          "disabled": true,
           "settings": {
             "text": "Warum sollten Sie sich für die Anti-Aging-Mikroinfusion von Seralys entscheiden?"
           }
         },
         "heading_mARJ7J": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "text": "Heading",
+            "text": "Warum sollten Sie sich für die Anti-Aging-Mikroinfusion von Seralys entscheiden?",
             "heading_tag": "h1",
             "text_color": "",
             "gradient": ""
