@@ -229,10 +229,11 @@
         "item_8LBFa4": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/A_V1.jpg",
             "column_size": "3",
             "title": "Laura",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Für alle, die sich fragen, ob es wehtut: Nein, es tut nicht weh! Nach nur drei Anwendungen habe ich das Gefühl, wieder die Haut meiner 30er Jahre zu haben! Mein Teint ist strahlend, meine Haut ist glatter und straffer. Ich bin begeistert.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -241,10 +242,11 @@
         "item_K8hnVq": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/A_V8.jpg",
             "column_size": "3",
-            "title": "Column title",
+            "title": "Anna",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Mit 71 Jahren dachte ich, dass man gegen die Falten an meinem Dekolleté nichts mehr tun kann. Aber dieses Produkt hat Wunder gewirkt.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -253,10 +255,76 @@
         "item_dqDrnz": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/A_V3.jpg",
             "column_size": "3",
-            "title": "Column title",
+            "title": "Clara",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Ich hasste die Falten und die schlaffe Haut an meinem Hals, und das einzige Produkt, das wirklich etwas bewirkt hat, ist dieses. Meine Haut ist so glatt und straff, dass das Ergebnis verblüffend ist!</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_Dndj3D": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/A_V2.jpg",
+            "column_size": "3",
+            "title": "Johanna",
+            "heading_tag": "h4",
+            "content": "<p>Seit ich dieses Produkt verwende, hat sich meine Haut verändert. Die Ergebnisse sind schnell sichtbar, und ich kann nicht mehr darauf verzichten. Es ist zu einem unverzichtbaren Bestandteil meiner Schönheitspflege geworden.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_FiWK86": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/A_V4.jpg",
+            "column_size": "3",
+            "title": "Amelie",
+            "heading_tag": "h4",
+            "content": "<p>Schon nach der ersten Anwendung habe ich bemerkt, dass die Fältchen um meine Lippen herum langsamer verschwinden. Nach etwa einem Monat waren meine Lippen glatter und voller.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_hEPtMG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/A_V5.jpg",
+            "column_size": "3",
+            "title": "Hannah",
+            "heading_tag": "h4",
+            "content": "<p>Das ist unglaublich! Ich hätte nie gedacht, dass meine Krähenfüße so schnell verschwinden würden und die Anwendung so einfach ist.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_9ahJpn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/A_V6.jpg",
+            "column_size": "3",
+            "title": "Charlotte",
+            "heading_tag": "h4",
+            "content": "<p>Ich dachte, Laser wäre meine einzige Lösung, aber dank der Mikroinfusion ist meine Haut endlich ebenmäßig und strahlend! Und außerdem ist die Behandlung schmerzfrei!\"</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_qmQPfG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/A_V7.jpg",
+            "column_size": "3",
+            "title": "Mia",
+            "heading_tag": "h4",
+            "content": "<p>Ich hatte Angst, dass es schmerzhaft sein würde, aber das war überhaupt nicht der Fall! Ich konnte meine Stirnfalten nicht mehr ertragen und dachte über eine Behandlung in einer Klinik nach, dann habe ich Seralys ausprobiert. Ich bin so glücklich!</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -266,7 +334,12 @@
       "block_order": [
         "item_8LBFa4",
         "item_K8hnVq",
-        "item_dqDrnz"
+        "item_dqDrnz",
+        "item_Dndj3D",
+        "item_FiWK86",
+        "item_hEPtMG",
+        "item_9ahJpn",
+        "item_qmQPfG"
       ],
       "name": "Multi-column",
       "settings": {
