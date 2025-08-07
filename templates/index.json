@@ -395,7 +395,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/offre1_2.jpg",
-            "alignment": "start",
+            "alignment": "center",
             "max_width": 500
           }
         },
@@ -448,7 +448,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/rassu.jpg",
-            "alignment": "start",
+            "alignment": "center",
             "max_width": 500
           }
         }
