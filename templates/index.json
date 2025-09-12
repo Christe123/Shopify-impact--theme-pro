@@ -15,8 +15,8 @@
         "slide-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Baniere_LOGO.png",
-            "mobile_image": "shopify://shop_images/Baniere_LOGO_square.png",
+            "image": "shopify://shop_images/BAN_PC.png",
+            "mobile_image": "shopify://shop_images/BANIERE_ONE.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -74,7 +74,6 @@
         "logo_8jx4G6": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/1200px-VOGUE_revista_-_logo_1.png",
             "logo_width": 280,
             "link": ""
           }
@@ -82,7 +81,6 @@
         "logo_9kbE4F": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Marie_Claire_Magazine_logo.svg_1.png",
             "logo_width": 300,
             "link": ""
           }
@@ -90,7 +88,6 @@
         "logo_AyHGPV": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Comopolitan_Magazine_Logo_svg_1.png",
             "logo_width": 300,
             "link": ""
           }
@@ -98,7 +95,6 @@
         "logo_giFrzf": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/logo-seo_1.png",
             "logo_width": 300,
             "link": ""
           }
@@ -169,8 +165,6 @@
         "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "auto",
-        "image": "shopify://shop_images/Copie_de_Template_section_benefice.png",
-        "mobile_image": "shopify://shop_images/Copie_de_Template_section_benefice.png",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
         "text_color": "#ffffff",
@@ -215,7 +209,6 @@
         "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "auto",
-        "image": "shopify://shop_images/Sans_titre_785_x_615_px_800_x_800_px.gif",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
         "text_color": "#ffffff",
@@ -229,7 +222,6 @@
         "item_8LBFa4": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/A_V1.jpg",
             "column_size": "3",
             "title": "Laura",
             "heading_tag": "h4",
@@ -242,7 +234,6 @@
         "item_K8hnVq": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/A_V8.jpg",
             "column_size": "3",
             "title": "Anna",
             "heading_tag": "h4",
@@ -255,7 +246,6 @@
         "item_dqDrnz": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/A_V3.jpg",
             "column_size": "3",
             "title": "Clara",
             "heading_tag": "h4",
@@ -268,7 +258,6 @@
         "item_Dndj3D": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/A_V2.jpg",
             "column_size": "3",
             "title": "Johanna",
             "heading_tag": "h4",
@@ -281,7 +270,6 @@
         "item_FiWK86": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/A_V4.jpg",
             "column_size": "3",
             "title": "Amelie",
             "heading_tag": "h4",
@@ -294,7 +282,6 @@
         "item_hEPtMG": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/A_V5.jpg",
             "column_size": "3",
             "title": "Hannah",
             "heading_tag": "h4",
@@ -307,7 +294,6 @@
         "item_9ahJpn": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/A_V6.jpg",
             "column_size": "3",
             "title": "Charlotte",
             "heading_tag": "h4",
@@ -320,7 +306,6 @@
         "item_qmQPfG": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/A_V7.jpg",
             "column_size": "3",
             "title": "Mia",
             "heading_tag": "h4",
@@ -394,7 +379,6 @@
         "image_JBzmCb": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/offre1_2.jpg",
             "alignment": "center",
             "max_width": 500
           }
@@ -447,7 +431,6 @@
         "image_Rmj7wV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/rassu.jpg",
             "alignment": "center",
             "max_width": 500
           }
