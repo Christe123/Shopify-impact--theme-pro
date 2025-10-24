@@ -228,10 +228,11 @@
         "item_LdmnNy": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/5.png",
             "column_size": "3",
             "title": "Column title",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Mon mari m'a dit un soir : 'T'as l'air d'avoir 10 ans de plus qu'il y a 2 ans'. Ça m'a brisée parce que c'était vrai. Le stress m'avait bouffé le visage. Joues gonflées, double menton, cernes permanents. 40 jours après avoir réinitialisé mon cortisol, il m'a dit : 'J'ai retrouvé ma femme'. Mon visage a rajeuni de 5 ans.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
