@@ -215,10 +215,11 @@
         "item_izPqBq": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/6.png",
             "column_size": "3",
-            "title": "Column title",
+            "title": "Maria G.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Pendant des mois, je me réveillais avec le visage bouffi et des poches sous les yeux. J'ai tout essayé sans résultat. Depuis que j'ai commencé  ORNEVIA il y a 35 jours, mon visage s'est affiné naturellement et mes traits se sont redessinés. Mes collègues me demandent quel soin j'ai fait, mais la vérité c'est que j'ai juste réinitialisé mon cortisol.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
