@@ -56,28 +56,32 @@
         "logo_fDeXYG": {
           "type": "logo",
           "settings": {
-            "logo_width": 120,
+            "logo": "shopify://shop_images/db570427-cc55-4c68-afe1-002e6e8345ac.jpg",
+            "logo_width": 150,
             "link": ""
           }
         },
         "logo_EmDdXG": {
           "type": "logo",
           "settings": {
-            "logo_width": 120,
+            "logo": "shopify://shop_images/echo_du_consommateur.png",
+            "logo_width": 150,
             "link": ""
           }
         },
         "logo_6cDWb9": {
           "type": "logo",
           "settings": {
-            "logo_width": 120,
+            "logo": "shopify://shop_images/le_point.fr.png",
+            "logo_width": 150,
             "link": ""
           }
         },
         "logo_zQUyAc": {
           "type": "logo",
           "settings": {
-            "logo_width": 120,
+            "logo": "shopify://shop_images/buzzfeed.jpg",
+            "logo_width": 150,
             "link": ""
           }
         }
