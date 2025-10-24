@@ -202,10 +202,11 @@
         "item_9FHTVJ": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/4.png",
             "column_size": "3",
-            "title": "Column title",
+            "title": "Sarah P.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>\"Mon corps stockait tout au ventre, mon cerveau refusait de s'arrêter. Je pensais que c'était normal à 34 ans. Spoiler : non. 4 semaines après avoir calmé mon cortisol, j'ai perdu 6 kg et retrouvé mon calme. Les deux étaient liés.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
