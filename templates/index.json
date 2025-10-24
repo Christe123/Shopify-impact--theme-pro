@@ -257,6 +257,107 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "featured_product_HPdKNQ": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor_WL9Cfg": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title_eJpPcf": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "badges_JgJeLX": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price_thfGVA": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating_NUA4AP": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "separator_nxzdBG": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description_xkEXFD": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "variant_picker_arV9CP": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector_9HAakK": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_qbPmY4": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "pickup_availability_jMaexT": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor_WL9Cfg",
+        "title_eJpPcf",
+        "badges_JgJeLX",
+        "price_thfGVA",
+        "rating_NUA4AP",
+        "separator_nxzdBG",
+        "description_xkEXFD",
+        "variant_picker_arV9CP",
+        "quantity_selector_9HAakK",
+        "buy_buttons_qbPmY4",
+        "pickup_availability_jMaexT"
+      ],
+      "name": "Featured product",
+      "settings": {
+        "full_width": true,
+        "product": "equilibre-et-bien-etre-au-quotidien-calme-et-energie-des-la-premiere-gorgee",
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
     }
   },
   "order": [
@@ -265,6 +366,7 @@
     "rich_text_4DF6xP",
     "image_with_text_overlay_JBa8w4",
     "trustpilot_compact_PYedLW",
-    "multi_column_Q8D6Va"
+    "multi_column_Q8D6Va",
+    "featured_product_HPdKNQ"
   ]
 }
