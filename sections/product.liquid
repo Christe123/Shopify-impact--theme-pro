@@ -29,16 +29,19 @@
     {%- comment -%} INFO PRODUIT {%- endcomment -%}
     <div class="product-info">
       
-      {%- comment -%} VENDOR {%- endcomment -%}
-      {%- if product.vendor != blank and section.settings.show_vendor -%}
-        <p class="product-vendor">{{ product.vendor }}</p>
-      {%- endif -%}
+      {%- form 'product', product, id: 'product-form' -%}
+        <input type="hidden" name="id" value="{{ selected_variant.id }}">
+        
+        {%- comment -%} VENDOR {%- endcomment -%}
+        {%- if product.vendor != blank and section.settings.show_vendor -%}
+          <p class="product-vendor">{{ product.vendor }}</p>
+        {%- endif -%}
 
-      {%- comment -%} TITRE {%- endcomment -%}
-      <h1 class="product-title">{{ product.title }}</h1>
+        {%- comment -%} TITRE {%- endcomment -%}
+        <h1 class="product-title">{{ product.title }}</h1>
 
-      {%- comment -%} PRIX {%- endcomment -%}
-      <div class="product-price">
+        {%- comment -%} PRIX {%- endcomment -%}
+        <div class="product-price">
         <span class="price-current">{{ selected_variant.price | money }}</span>
         {%- if selected_variant.compare_at_price > selected_variant.price -%}
           <span class="price-compare">{{ selected_variant.compare_at_price | money }}</span>
@@ -184,8 +187,9 @@
 
           {%- endcase -%}
         </div>
-      {%- endfor -%}
+              {%- endfor -%}
 
+      {%- endform -%}
     </div>
   </div>
 </div>
@@ -558,6 +562,9 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const productForm = document.getElementById('product-form');
+  if (!productForm) return;
+
   // Changement d'images
   const thumbnails = document.querySelectorAll('.thumbnail');
   const images = document.querySelectorAll('.product-image');
@@ -573,6 +580,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Sélection de variants
   const variantBtns = document.querySelectorAll('.variant-btn');
+  const variantInput = productForm.querySelector('input[name="id"]');
+  
   variantBtns.forEach(btn => {
     btn.addEventListener('click', function() {
       const position = this.dataset.optionPosition;
@@ -586,8 +595,76 @@ document.addEventListener('DOMContentLoaded', function() {
       if (selectedSpan) {
         selectedSpan.textContent = this.dataset.value;
       }
+
+      // Trouver le variant correspondant
+      updateVariant();
     });
   });
+
+  function updateVariant() {
+    const selectedOptions = [];
+    document.querySelectorAll('.variant-btn.active').forEach(btn => {
+      selectedOptions.push(btn.dataset.value);
+    });
+
+    // Chercher le variant qui correspond
+    const variants = {{ product.variants | json }};
+    const matchingVariant = variants.find(variant => {
+      return variant.options.every((option, index) => {
+        return option === selectedOptions[index];
+      });
+    });
+
+    if (matchingVariant && variantInput) {
+      variantInput.value = matchingVariant.id;
+      
+      // Mettre à jour le prix
+      updatePrice(matchingVariant);
+      
+      // Mettre à jour le bouton
+      updateButton(matchingVariant);
+    }
+  }
+
+  function updatePrice(variant) {
+    const priceElement = document.querySelector('.price-current');
+    const compareElement = document.querySelector('.price-compare');
+    const badgeElement = document.querySelector('.price-badge');
+    
+    if (priceElement) {
+      priceElement.textContent = formatMoney(variant.price);
+    }
+    
+    if (compareElement && variant.compare_at_price > variant.price) {
+      compareElement.textContent = formatMoney(variant.compare_at_price);
+      compareElement.style.display = 'inline';
+      if (badgeElement) {
+        const discount = Math.round(((variant.compare_at_price - variant.price) / variant.compare_at_price) * 100);
+        badgeElement.textContent = `-${discount}%`;
+        badgeElement.style.display = 'inline';
+      }
+    } else {
+      if (compareElement) compareElement.style.display = 'none';
+      if (badgeElement) badgeElement.style.display = 'none';
+    }
+  }
+
+  function updateButton(variant) {
+    const addBtn = document.querySelector('.btn-add-to-cart');
+    if (!addBtn) return;
+    
+    if (variant.available) {
+      addBtn.disabled = false;
+      addBtn.textContent = addBtn.dataset.addText || 'Ajouter au panier';
+    } else {
+      addBtn.disabled = true;
+      addBtn.textContent = addBtn.dataset.soldoutText || 'Épuisé';
+    }
+  }
+
+  function formatMoney(cents) {
+    return (cents / 100).toFixed(2).replace('.', ',') + ' €';
+  }
 
   // Quantité
   const qtyMinus = document.querySelector('.qty-minus');
@@ -607,6 +684,42 @@ document.addEventListener('DOMContentLoaded', function() {
       qtyInput.value = val + 1;
     });
   }
+
+  // Ajout au panier
+  productForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const addBtn = this.querySelector('.btn-add-to-cart');
+    const originalText = addBtn.textContent;
+    
+    addBtn.disabled = true;
+    addBtn.textContent = 'Ajout en cours...';
+    
+    fetch('/cart/add.js', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Mettre à jour le compteur du panier
+      if (window.theme && window.theme.refreshCart) {
+        window.theme.refreshCart();
+      }
+      
+      addBtn.textContent = '✓ Ajouté !';
+      setTimeout(() => {
+        addBtn.disabled = false;
+        addBtn.textContent = originalText;
+      }, 2000);
+    })
+    .catch(error => {
+      console.error('Erreur:', error);
+      addBtn.disabled = false;
+      addBtn.textContent = originalText;
+      alert('Erreur lors de l\'ajout au panier');
+    });
+  });
 });
 </script>
 
