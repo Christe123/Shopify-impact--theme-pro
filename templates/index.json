@@ -349,6 +349,12 @@
           "type": "vendor",
           "settings": {}
         },
+        "liquid_hxhC7y": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{%- comment -%}\nBadge d’avis style Trust (5 carrés verts + étoiles) – version page produit\n- Cherche d’abord un compteur sur le produit (metafield \"custom.reviews_count\")\n- Sinon utilise le global (shop.metafields.custom.reviews_count_global)\n- Sinon fallback à 1067 \"avis vérifiés\"\nPersonnalisation rapide :\n  - Couleur carrés : changez --star\n  - Couleur texte : hérite de la typo du thème (ou définissez --tc)\n{%- endcomment -%}\n\n{%- assign _count =\n  product.metafields.custom.reviews_count\n  | default: shop.metafields.custom.reviews_count_global\n  | default: '1067'\n-%}\n{%- assign _label =\n  product.metafields.custom.reviews_label\n  | default: shop.metafields.custom.reviews_label_global\n  | default: 'avis vérifiés'\n-%}\n\n<div class=\"rvb-badge\" style=\"--star:#00B67A; --tc:currentColor; --size:16px; --gap:4px; display:inline-flex; align-items:center; gap:10px;\">\n  <span class=\"rvb-stars\" aria-hidden=\"true\" style=\"display:inline-flex; gap:var(--gap);\">\n    {%- for i in (1..5) -%}\n      <span class=\"rvb-square\" style=\"width:calc(var(--size)*1.6);height:calc(var(--size)*1.6);background:var(--star);border-radius:2px;display:inline-flex;align-items:center;justify-content:center;\">\n        <svg viewBox=\"0 0 24 24\" class=\"rvb-icon\" style=\"width:var(--size);height:var(--size);fill:#FFFFFF;display:block;\"><path d=\"M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z\"/></svg>\n      </span>\n    {%- endfor -%}\n  </span>\n  <span class=\"rvb-text\" style=\"font-size:18px; line-height:1; color:var(--tc); font-weight:500; margin-left:10px;\">\n    {{ _count }} {{ _label }}\n  </span>\n</div>\n\n<style>\n  /* S’intègre mieux dans la zone titre/prix du produit */\n  .product__info-container .rvb-badge{ margin-top:.25rem; }\n  @media (max-width:480px){\n    .rvb-badge .rvb-text{ font-size:16px; }\n  }\n</style>"
+          }
+        },
         "title_eJpPcf": {
           "type": "title",
           "settings": {
@@ -395,6 +401,14 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "image_8nkzbi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PROMO_D_AUTOME_2.webp",
+            "alignment": "center",
+            "max_width": 500
+          }
+        },
         "buy_buttons_qbPmY4": {
           "type": "buy_buttons",
           "settings": {
@@ -413,6 +427,7 @@
       },
       "block_order": [
         "vendor_WL9Cfg",
+        "liquid_hxhC7y",
         "title_eJpPcf",
         "badges_JgJeLX",
         "price_thfGVA",
@@ -421,6 +436,7 @@
         "description_xkEXFD",
         "variant_picker_arV9CP",
         "quantity_selector_9HAakK",
+        "image_8nkzbi",
         "buy_buttons_qbPmY4",
         "pickup_availability_jMaexT"
       ],
@@ -442,6 +458,53 @@
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
       }
+    },
+    "tabs_EUrMkB": {
+      "type": "tabs",
+      "blocks": {
+        "tab_BJ7mJK": {
+          "type": "tab",
+          "settings": {
+            "title": "Ingrédients",
+            "content": "<p><strong>Ingrédients actifs :</strong></p><ul><li><strong>Ashwagandha</strong> : 300 mg</li><li><strong>L-Théanine</strong> : 400 mg</li><li><strong>Magnésium Glycinate</strong> : 100 mg</li><li><strong>Vitamine D3</strong> : 1000 IU</li></ul><p><strong>Autres ingrédients :</strong></p><ul><li>Acide citrique, arôme naturel de framboise, arôme naturel de citron, extrait de betterave biologique, extrait de feuille de stévia.</li></ul>",
+            "page": ""
+          }
+        },
+        "tab_P6A4fp": {
+          "type": "tab",
+          "settings": {
+            "title": "Posologie",
+            "content": "<p><strong>Prendre 1 sachet par jour</strong>, de préférence le matin ou ou le soir, du lundi au vendredi.</p><ul><li><strong>En cas de stress intense</strong>, il est possible de prendre jusqu'à <strong>2 sachets par jour</strong>, en répartissant les prises dans la journée (par exemple, un le matin et un autre en début d’après-midi).</li><li><strong>Pause recommandée le week-end</strong> pour maximiser les bienfaits à long terme et éviter que l'organisme ne développe une tolérance.</li></ul><p>Bien agiter ou mélanger dans un verre d’eau avant consommation. Pour des résultats optimaux, suivez cette routine régulièrement.</p>",
+            "page": ""
+          }
+        },
+        "tab_QTyBqK": {
+          "type": "tab",
+          "settings": {
+            "title": "Expédition & Livraison",
+            "content": "<p>Toutes les commandes sont expédiées en 24 à 48h.</p><p>Livraison sous 5 à 14 jours ouvrés en France, dans toute l'Europe et au Canada.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_BJ7mJK",
+        "tab_P6A4fp",
+        "tab_QTyBqK"
+      ],
+      "name": "Tabs",
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "subheading": "",
+        "title": "",
+        "first_tab_open": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
     }
   },
   "order": [
@@ -451,6 +514,7 @@
     "image_with_text_overlay_JBa8w4",
     "trustpilot_compact_PYedLW",
     "multi_column_Q8D6Va",
-    "featured_product_HPdKNQ"
+    "featured_product_HPdKNQ",
+    "tabs_EUrMkB"
   ]
 }
