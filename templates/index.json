@@ -199,27 +199,14 @@
     "multi_column_Q8D6Va": {
       "type": "multi-column",
       "blocks": {
-        "item_9FHTVJ": {
+        "item_aF3YzN": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/4.png",
+            "image": "shopify://shop_images/17_a808bc6a-9332-443c-a382-388650c91a44.png",
             "column_size": "3",
-            "title": "Sarah P.",
+            "title": "Émilie F.",
             "heading_tag": "h4",
-            "content": "<p>\"Mon corps stockait tout au ventre, mon cerveau refusait de s'arrêter. Je pensais que c'était normal à 34 ans. Spoiler : non. 4 semaines après avoir calmé mon cortisol, j'ai perdu 6 kg et retrouvé mon calme. Les deux étaient liés.</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_izPqBq": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/6.png",
-            "column_size": "3",
-            "title": "Maria G.",
-            "heading_tag": "h4",
-            "content": "<p>Pendant des mois, je me réveillais avec le visage bouffi et des poches sous les yeux. J'ai tout essayé sans résultat. Depuis que j'ai commencé  ORNEVIA il y a 35 jours, mon visage s'est affiné naturellement et mes traits se sont redessinés. Mes collègues me demandent quel soin j'ai fait, mais la vérité c'est que j'ai juste réinitialisé mon cortisol.</p>",
+            "content": "<p>Ma transformation n'est pas spectaculaire. Mais elle est RÉELLE. Mon visage était fatigué en permanence. Cernes, poches, teint terne. Je faisais plus vieille que mon âge. Depuis que mon cortisol a baissé et que je dors mieux, mon visage RESPIRE. Les gens me disent 'tu as l'air reposée'. C'est le plus beau compliment qu'on m'ait fait depuis 5 ans</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -303,14 +290,27 @@
             "link_style": "link"
           }
         },
-        "item_aF3YzN": {
+        "item_izPqBq": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/17_a808bc6a-9332-443c-a382-388650c91a44.png",
+            "image": "shopify://shop_images/6.png",
             "column_size": "3",
-            "title": "Émilie F.",
+            "title": "Maria G.",
             "heading_tag": "h4",
-            "content": "<p>Ma transformation n'est pas spectaculaire. Mais elle est RÉELLE. Mon visage était fatigué en permanence. Cernes, poches, teint terne. Je faisais plus vieille que mon âge. Depuis que mon cortisol a baissé et que je dors mieux, mon visage RESPIRE. Les gens me disent 'tu as l'air reposée'. C'est le plus beau compliment qu'on m'ait fait depuis 5 ans</p>",
+            "content": "<p>Pendant des mois, je me réveillais avec le visage bouffi et des poches sous les yeux. J'ai tout essayé sans résultat. Depuis que j'ai commencé  ORNEVIA il y a 35 jours, mon visage s'est affiné naturellement et mes traits se sont redessinés. Mes collègues me demandent quel soin j'ai fait, mais la vérité c'est que j'ai juste réinitialisé mon cortisol.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_9FHTVJ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/4.png",
+            "column_size": "3",
+            "title": "Sarah P.",
+            "heading_tag": "h4",
+            "content": "<p>\"Mon corps stockait tout au ventre, mon cerveau refusait de s'arrêter. Je pensais que c'était normal à 34 ans. Spoiler : non. 4 semaines après avoir calmé mon cortisol, j'ai perdu 6 kg et retrouvé mon calme. Les deux étaient liés.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -318,15 +318,15 @@
         }
       },
       "block_order": [
-        "item_9FHTVJ",
-        "item_izPqBq",
+        "item_aF3YzN",
         "item_LdmnNy",
         "item_iCqEiC",
         "item_Lp3hkd",
         "item_C7eeLd",
         "item_9qqziz",
         "item_BVqpF4",
-        "item_aF3YzN"
+        "item_izPqBq",
+        "item_9FHTVJ"
       ],
       "name": "Multi-column",
       "settings": {
