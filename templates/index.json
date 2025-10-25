@@ -230,9 +230,87 @@
           "settings": {
             "image": "shopify://shop_images/5.png",
             "column_size": "3",
-            "title": "Column title",
+            "title": "Julia M.",
             "heading_tag": "h4",
             "content": "<p>Mon mari m'a dit un soir : 'T'as l'air d'avoir 10 ans de plus qu'il y a 2 ans'. Ça m'a brisée parce que c'était vrai. Le stress m'avait bouffé le visage. Joues gonflées, double menton, cernes permanents. 40 jours après avoir réinitialisé mon cortisol, il m'a dit : 'J'ai retrouvé ma femme'. Mon visage a rajeuni de 5 ans.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_iCqEiC": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/8.png",
+            "column_size": "3",
+            "title": "Juliette S.",
+            "heading_tag": "h4",
+            "content": "<p>J'en avais marre d'avoir l'air crevée alors que je faisais des efforts. Eau, sport, vitamines, rien ne changeait cette tête de fatigue permanente. Le problème était plus profond : mon stress chronique gonflait mon visage et creusait mes yeux. Depuis que j'ai traité la cause au lieu des symptômes, mon miroir me sourit enfin.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_Lp3hkd": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/10.png",
+            "column_size": "3",
+            "title": "Divine C.",
+            "heading_tag": "h4",
+            "content": "<p>J'ai fait du sport pendant 2 ans sans voir de résultats. Je mangeais bien, je m'entraînais 4 fois par semaine, RIEN ne bougeait. Mon coach me disait 'ton alimentation doit être mauvaise'. Non, c'était mon cortisol qui bloquait TOUT. Depuis que je l'ai calmé, mon corps a enfin répondu. En 12 semaines, j'ai perdu ce que je n'arrivais pas à perdre en 2 ans.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_C7eeLd": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/11.png",
+            "column_size": "3",
+            "title": "Claire P.",
+            "heading_tag": "h4",
+            "content": "<p>Je ne me rendais même plus compte que je fronçais les sourcils H24. Mon front était en tension permanente. Des rides horizontales profondément gravées. Les gens me demandaient si j'étais en colère alors que j'étais juste... stressée. Quand mon cortisol a baissé, mon front a LÂCHÉ. Les muscles se sont détendus. Les rides se sont atténuées. Mon visage reflète enfin comment je me sens vraiment.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_9qqziz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/13.png",
+            "column_size": "3",
+            "title": "Emma T",
+            "heading_tag": "h4",
+            "content": "<p>J'avais des abdos... sous une couche d'eau et de gonflement. Je m'entraînais dur mais ils restaient cachés. Mon ventre n'était jamais vraiment défini. Quand j'ai compris que mon stress maintenait une inflammation chronique, j'ai ciblé mon cortisol. 6 semaines après, mes abdos sont apparus. Ils étaient là depuis le début, juste noyés sous le stress.\"</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_BVqpF4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/18.png",
+            "column_size": "3",
+            "title": "Hélene R.",
+            "heading_tag": "h4",
+            "content": "<p>À 52 ans, mon visage était rouge, gonflé, fatigué. Les gens me donnaient 60 ans. Mon dermato parlait de rosacée, de couperose, me prescrivait des crèmes à 80€. Rien ne marchait parce que le problème était INTERNE. Mon cortisol élevé maintenait une inflammation chronique qui ravageait ma peau. 8 semaines après l'avoir calmé, mon visage s'est transformé. Les rougeurs ont fondu, le gonflement a disparu. On me donne à nouveau mon âge. Enfin.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_aF3YzN": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/17_a808bc6a-9332-443c-a382-388650c91a44.png",
+            "column_size": "3",
+            "title": "Émilie F.",
+            "heading_tag": "h4",
+            "content": "<p>Ma transformation n'est pas spectaculaire. Mais elle est RÉELLE. Mon visage était fatigué en permanence. Cernes, poches, teint terne. Je faisais plus vieille que mon âge. Depuis que mon cortisol a baissé et que je dors mieux, mon visage RESPIRE. Les gens me disent 'tu as l'air reposée'. C'est le plus beau compliment qu'on m'ait fait depuis 5 ans</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -242,7 +320,13 @@
       "block_order": [
         "item_9FHTVJ",
         "item_izPqBq",
-        "item_LdmnNy"
+        "item_LdmnNy",
+        "item_iCqEiC",
+        "item_Lp3hkd",
+        "item_C7eeLd",
+        "item_9qqziz",
+        "item_BVqpF4",
+        "item_aF3YzN"
       ],
       "name": "Multi-column",
       "settings": {
