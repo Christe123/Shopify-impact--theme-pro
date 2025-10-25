@@ -1,0 +1,601 @@
+<div class="customer-reviews-section">
+  <div class="reviews-container">
+    
+    {% if section.settings.title != blank %}
+      <h2 class="reviews-title">{{ section.settings.title }}</h2>
+    {% endif %}
+
+    <div class="reviews-slider">
+      <div class="reviews-track">
+        {% for block in section.blocks %}
+          <div class="review-card" {{ block.shopify_attributes }}>
+            
+            <div class="review-header">
+              {% if block.settings.avatar != blank %}
+                <img src="{{ block.settings.avatar | image_url: width: 80 }}" alt="{{ block.settings.customer_name }}" class="review-avatar">
+              {% else %}
+                <div class="review-avatar-placeholder">
+                  {{ block.settings.customer_name | slice: 0 }}
+                </div>
+              {% endif %}
+              
+              <div class="review-info">
+                <p class="review-name">{{ block.settings.customer_name }}</p>
+                <div class="review-stars">
+                  {% for i in (1..5) %}
+                    <span class="star">★</span>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+
+            <p class="review-text">{{ block.settings.review_text }}</p>
+
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if section.blocks.size > 1 %}
+        <div class="reviews-dots">
+          {% for block in section.blocks %}
+            <button class="dot {% if forloop.first %}active{% endif %}" data-slide="{{ forloop.index0 }}"></button>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+
+<style>
+.customer-reviews-section {
+  background: {{ section.settings.background_color }};
+  padding: {{ section.settings.section_padding }}px 20px;
+  overflow: hidden;
+}
+
+.reviews-container {
+  max-width: {{ section.settings.max_width }}px;
+  margin: 0 auto;
+}
+
+.reviews-title {
+  font-size: {{ section.settings.title_size }}px;
+  color: {{ section.settings.title_color }};
+  text-align: {{ section.settings.title_align }};
+  margin-bottom: {{ section.settings.title_spacing }}px;
+  font-weight: 600;
+}
+
+.reviews-slider {
+  position: relative;
+}
+
+.reviews-track {
+  display: flex;
+  gap: {{ section.settings.card_gap }}px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 10px;
+}
+
+.reviews-track::-webkit-scrollbar {
+  display: none;
+}
+
+.review-card {
+  min-width: {{ section.settings.card_width }}px;
+  background: {{ section.settings.card_background }};
+  border-radius: {{ section.settings.card_radius }}px;
+  padding: {{ section.settings.card_padding }}px;
+  box-shadow: {{ section.settings.card_shadow }};
+  border: {{ section.settings.card_border_width }}px solid {{ section.settings.card_border_color }};
+  flex-shrink: 0;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.review-avatar {
+  width: {{ section.settings.avatar_size }}px;
+  height: {{ section.settings.avatar_size }}px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid {{ section.settings.avatar_border_color }};
+}
+
+.review-avatar-placeholder {
+  width: {{ section.settings.avatar_size }}px;
+  height: {{ section.settings.avatar_size }}px;
+  border-radius: 50%;
+  background: {{ section.settings.placeholder_bg }};
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: {{ section.settings.avatar_size | divided_by: 2 }}px;
+  font-weight: bold;
+}
+
+.review-info {
+  flex: 1;
+}
+
+.review-name {
+  font-size: {{ section.settings.name_size }}px;
+  color: {{ section.settings.name_color }};
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  font-style: {{ section.settings.name_style }};
+}
+
+.review-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.review-stars .star {
+  color: {{ section.settings.star_color }};
+  font-size: {{ section.settings.star_size }}px;
+}
+
+.review-text {
+  font-size: {{ section.settings.text_size }}px;
+  color: {{ section.settings.text_color }};
+  line-height: 1.6;
+  margin: 0;
+  font-style: {{ section.settings.text_style }};
+}
+
+.reviews-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: {{ section.settings.dot_color }};
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: {{ section.settings.dot_active_color }};
+  width: 25px;
+  border-radius: 5px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .customer-reviews-section {
+    padding: {{ section.settings.mobile_padding }}px 15px;
+  }
+
+  .reviews-title {
+    font-size: {{ section.settings.mobile_title_size }}px;
+  }
+
+  .review-card {
+    min-width: {{ section.settings.mobile_card_width }}%;
+  }
+
+  .review-text {
+    font-size: {{ section.settings.mobile_text_size }}px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.reviews-track');
+  const dots = document.querySelectorAll('.dot');
+  
+  if (!track || dots.length === 0) return;
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      const cardWidth = track.querySelector('.review-card').offsetWidth;
+      const gap = {{ section.settings.card_gap }};
+      track.scrollLeft = (cardWidth + gap) * index;
+      
+      dots.forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+    });
+  });
+
+  // Auto-update dots on scroll
+  track.addEventListener('scroll', () => {
+    const cardWidth = track.querySelector('.review-card').offsetWidth;
+    const gap = {{ section.settings.card_gap }};
+    const currentIndex = Math.round(track.scrollLeft / (cardWidth + gap));
+    
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === currentIndex);
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Avis Clients",
+  "tag": "section",
+  "class": "customer-reviews",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Titre"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre de la section",
+      "default": "Ce que nos clients disent"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Taille du titre",
+      "min": 18,
+      "max": 36,
+      "step": 2,
+      "default": 28,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_title_size",
+      "label": "Taille titre mobile",
+      "min": 16,
+      "max": 28,
+      "step": 2,
+      "default": 22,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Couleur du titre",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "select",
+      "id": "title_align",
+      "label": "Alignement du titre",
+      "options": [
+        {"value": "left", "label": "Gauche"},
+        {"value": "center", "label": "Centré"},
+        {"value": "right", "label": "Droite"}
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "label": "Espace sous le titre",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Carte d'avis"
+    },
+    {
+      "type": "range",
+      "id": "card_width",
+      "label": "Largeur des cartes",
+      "min": 250,
+      "max": 500,
+      "step": 25,
+      "default": 350,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_width",
+      "label": "Largeur carte mobile",
+      "min": 75,
+      "max": 95,
+      "step": 5,
+      "default": 85,
+      "unit": "%"
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Espace entre cartes",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "label": "Padding intérieur",
+      "min": 15,
+      "max": 40,
+      "step": 5,
+      "default": 25,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Arrondi des coins",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Fond de carte",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "card_shadow",
+      "label": "Ombre de carte",
+      "options": [
+        {"value": "none", "label": "Aucune"},
+        {"value": "0 2px 8px rgba(0,0,0,0.08)", "label": "Légère"},
+        {"value": "0 4px 12px rgba(0,0,0,0.12)", "label": "Moyenne"},
+        {"value": "0 8px 20px rgba(0,0,0,0.15)", "label": "Forte"}
+      ],
+      "default": "0 4px 12px rgba(0,0,0,0.12)"
+    },
+    {
+      "type": "range",
+      "id": "card_border_width",
+      "label": "Épaisseur bordure",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 1,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Couleur bordure",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "header",
+      "content": "Avatar"
+    },
+    {
+      "type": "range",
+      "id": "avatar_size",
+      "label": "Taille avatar",
+      "min": 40,
+      "max": 80,
+      "step": 5,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "avatar_border_color",
+      "label": "Bordure avatar",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_bg",
+      "label": "Fond placeholder",
+      "default": "#d4a373"
+    },
+    {
+      "type": "header",
+      "content": "Texte"
+    },
+    {
+      "type": "range",
+      "id": "name_size",
+      "label": "Taille nom",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "name_color",
+      "label": "Couleur nom",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "select",
+      "id": "name_style",
+      "label": "Style nom",
+      "options": [
+        {"value": "normal", "label": "Normal"},
+        {"value": "italic", "label": "Italique"}
+      ],
+      "default": "italic"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Taille texte avis",
+      "min": 13,
+      "max": 18,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_text_size",
+      "label": "Taille texte mobile",
+      "min": 12,
+      "max": 16,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur texte",
+      "default": "#333333"
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "label": "Style texte",
+      "options": [
+        {"value": "normal", "label": "Normal"},
+        {"value": "italic", "label": "Italique"}
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "label": "Taille étoiles",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Couleur étoiles",
+      "default": "#00b67a"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Couleur points",
+      "default": "#d1d5db"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_color",
+      "label": "Couleur point actif",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximale",
+      "min": 800,
+      "max": 1400,
+      "step": 100,
+      "default": 1200,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Padding vertical",
+      "min": 20,
+      "max": 80,
+      "step": 10,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding",
+      "label": "Padding mobile",
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur de fond",
+      "default": "#f9fafb"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Avis Client",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Photo du client"
+        },
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Nom du client",
+          "default": "Julienne H."
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Texte de l'avis",
+          "default": "Elles sont exactement comme annoncées ! Je les porte tous les jours à la salle de sport et j'ai fini mon camel toe !"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Avis Clients",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "customer_name": "Julienne H.",
+            "review_text": "Elles sont exactement comme annoncées ! Je les porte tous les jours à la salle de sport et j'ai fini mon camel toe !"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "customer_name": "Sophie M.",
+            "review_text": "Qualité incroyable ! Le tissu est respirant et très confortable. Je recommande à 100%."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "customer_name": "Marie L.",
+            "review_text": "Parfait pour le sport ! Maintien excellent et design très élégant."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
