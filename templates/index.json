@@ -485,12 +485,30 @@
             "content": "<p>Toutes les commandes sont expédiées en 24 à 48h.</p><p>Livraison sous 5 à 14 jours ouvrés en France, dans toute l'Europe et au Canada.</p>",
             "page": ""
           }
+        },
+        "tab_zKtpTi": {
+          "type": "tab",
+          "settings": {
+            "title": "Service Client 7j/j",
+            "content": "<p>Notre service client est à votre écoute 7J/7.<br/></p><p>Vous pouvez nous contacter par en utilisant l'onglet \"Contact\" de notre boutique ou par email à l'adresse<strong> contact@ornevia.com</strong></p>",
+            "page": ""
+          }
+        },
+        "tab_w7PFJe": {
+          "type": "tab",
+          "settings": {
+            "title": "Service Client 7j/j",
+            "content": "<p>Notre service client est à votre écoute 7J/7.<br/></p><p>Vous pouvez nous contacter par en utilisant l'onglet \"Contact\" de notre boutique ou par email à l'adresse<strong> contact@ornevia.com</strong></p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "tab_BJ7mJK",
         "tab_P6A4fp",
-        "tab_QTyBqK"
+        "tab_QTyBqK",
+        "tab_zKtpTi",
+        "tab_w7PFJe"
       ],
       "name": "Tabs",
       "settings": {
