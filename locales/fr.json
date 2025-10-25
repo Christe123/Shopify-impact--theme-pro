@@ -423,5 +423,15 @@
         "other": "Il a reçu {{ count }} avis."
       }
     }
+  },
+  "shopify": {
+    "checkout": {
+      "payment_errors": {
+        "captcha_required": "Veuillez saisir les informations de paiement et résoudre le captcha pour finaliser votre achat."
+      },
+      "payment_gateway": {
+        "bank_account_label": "Compte bancaire"
+      }
+    }
   }
 }
